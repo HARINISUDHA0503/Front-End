@@ -1,0 +1,61 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-4">
+
+    <div class="container">
+        <a class="navbar-brand text-black" href="#"><b>ROSEWOOD HOTEL</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"   aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">        
+            <span class="navbar-toggler-icon text-black"></span>      
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <ul class="navbar-nav">
+                &nbsp; &nbsp;
+                <li class="nav-item">
+                    <a class="nav-link text-black" (click)="navigate()" role="button"><b>dashboard</b></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<br>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<br>
+<div>
+    <a [routerLink]="['/inventory/add']"  class="text-primary">
+        <button class="btn btn-success"><i class="material-icons" id="add">&#xe7fe;</i>Add Inventory</button></a>&nbsp;
+</div>
+
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>inventoryCode</th>
+            <th>inventoryType</th>
+            <th>inventoryName</th>
+            <th>inventoryQuantity</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let inv of inventory">
+            <td>{{inv.inventoryCode}}</td>
+            <td>{{inv.inventoryType}}</td>
+            <td>{{inv.inventoryName}}</td>
+            <td>{{inv.inventoryQuantity}}</td>
+            <td>
+
+                <a [routerLink]="['/inventory/update',inv.inventoryCode]"  class="text-success">
+                    <i class="material-icons"  id="cart">&#xf88d;</i>
+                        </a>&nbsp;
+                        <a (click)="deleteInventory(inv.inventoryCode)" role="button" class="text-danger">
+                            <i class="material-icons"  id="cart">&#xe872;</i>
+                        </a>&nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table>

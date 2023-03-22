@@ -1,0 +1,97 @@
+    /* input {
+    width: 60%;
+    padding: 8px 2px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    background-color: darkseagreen;
+    border: 1px solid rgb(255, 254, 254);
+}
+
+td {
+    border: 1px solid #dddddd;
+    background-color: rgb(220, 245, 220);
+}
+
+td,
+th {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+div {
+    text-align: center;
+}
+
+.btn btn-accent {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    background-color: darkseagreen;
+    font-family: 'georgia';
+} */
+    /* .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 250px;
+        margin: auto;
+        text-align: center;
+        font-family: serif;
+    }
+    
+    .price {
+        color: grey;
+        font-size: 22px;
+    }
+    
+    .column button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+    
+    .column button:hover {
+        opacity: 0.7;
+    }
+    
+    .column {
+        float: left;
+        width: 25%;
+        padding: 0 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 270px;
+        margin: auto;
+        text-align: center;
+        font-family: serif;
+    }
+    
+    .row {
+        margin: 0 -5px;
+    }
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    h3 {
+        font-family: Geneva;
+    } */

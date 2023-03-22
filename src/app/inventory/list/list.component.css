@@ -1,0 +1,60 @@
+input {
+    width: 60%;
+    padding: 8px 2px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    background-color: darkseagreen;
+    border: 1px solid rgb(255, 254, 254);
+}
+
+td {
+    border: 1px solid #dddddd;
+    background-color: rgb(220, 245, 220);
+}
+
+td,
+th {
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+div {
+    text-align: center;
+}
+
+.btn btn-accent {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    background-color: darkseagreen;
+    font-family: 'georgia';
+}
+
+nav {
+    background: darkseagreen;
+    height: 50px;
+}
+
+b {
+    font-family: 'georgia';
+}
+
+a {
+    font-family: 'georgia';
+    font-size: larger;
+}

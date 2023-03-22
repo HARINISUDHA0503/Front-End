@@ -1,0 +1,26 @@
+input {
+    width: 250px;
+    text-align: center;
+}
+
+.container {
+    background-color: rgb(212, 250, 212);
+    color: rgb(3, 3, 3);
+    width: 40%;
+    text-align: center;
+    background-size: cover;
+}
+
+nav {
+    background: darkseagreen;
+    height: 50px;
+}
+
+b {
+    font-family: 'georgia';
+}
+
+h2 {
+    font-family: 'georgia';
+    text-align: center;
+}

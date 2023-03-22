@@ -1,0 +1,65 @@
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-4">
+
+        <div class="container">
+            <a class="navbar-brand text-black" href="#"><b>ROSEWOOD HOTEL</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"   aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">        
+            <span class="navbar-toggler-icon text-black"></span>      
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="mx-auto"></div>
+                <ul class="navbar-nav">
+                    &nbsp; &nbsp;
+                    <li class="nav-item">
+                        <a class="nav-link text-black" (click)="navigate()" role="button"><b>dashboard</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<br>
+<br>
+
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<br>
+<div>
+    <a [routerLink]="['/res/add']"  class="text-primary">
+        <button class="btn btn-success"><i class="material-icons" id="add">&#xe7fe;</i>Add Reservation</button></a>&nbsp;
+</div>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>reservationCode</th>
+            <th>name</th>
+            <th>gender</th>
+            <th>checkIn</th>
+            <th>checkOut</th>
+            <!-- <th>roomType</th> -->
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let reservation of reservations">
+            <td> {{ reservation.reservationCode }}</td>
+            <td> {{ reservation.name }}</td>
+            <td> {{ reservation.gender }}</td>
+            <td> {{ reservation.checkIn }}</td>
+            <td> {{ reservation.checkOut }}</td>
+            <!-- <td> {{ reservation.roomType }}</td> -->
+            <td>
+                <a [routerLink]="['/res/update', reservation.reservationCode]"  class="text-success">
+                    <i class="material-icons"  id="edit">&#xf88d;</i>
+                        </a>&nbsp;
+                        <a (click)="deleteReservation(reservation.reservationCode)" role="button" class="text-danger">
+                            <i class="material-icons"  id="cart">&#xe872;</i>
+                        </a>&nbsp;
+
+        </tr>
+    </tbody>
+</table>

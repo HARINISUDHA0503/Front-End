@@ -1,0 +1,61 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-4">
+
+    <div class="container">
+        <a class="navbar-brand text-black" href="#"><b>ROSEWOOD HOTEL</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"   aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">        
+            <span class="navbar-toggler-icon text-black"></span>      
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <ul class="navbar-nav">
+                &nbsp; &nbsp;
+                <li class="nav-item">
+                    <a class="nav-link text-black" (click)="navigate()" role="button"><b>dashboard</b></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<br>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"       rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <a [routerLink]="['/guest/add']"  class="text-primary">
+            <button class="btn btn-success"><i class="material-icons" id="add">&#xe7fe;</i>Add Guest</button></a>&nbsp;
+    </div>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Guest Id</th>
+                <th>Name</th>
+                <th>Contact</th>
+                <th>Gender</th>
+                <th>email</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let guest of guests">
+                <td> {{ guest.guestId }}</td>
+                <td> {{ guest.name }}</td>
+                <td> {{ guest.contact }}</td>
+                <td> {{ guest.gender }}</td>
+                <td> {{ guest.email }}</td>
+                <td> {{ guest.address }}</td>
+                <td>
+                    <a [routerLink]="['/guest/update',guest.guestId]" class="text-warning"><i class="material-icons" id="edit">&#xf88d;</i></a>&nbsp;
+                    <a (click)="deleteguest(guest.guestId)" role="button" class="text-danger"><i class="material-icons" id="delete">&#xe92b;</i></a>&nbsp;
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
